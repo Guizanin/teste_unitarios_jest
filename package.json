@@ -1,0 +1,38 @@
+{
+  "name": "teste_unitarios_jest",
+  "version": "1.0.0",
+  "description": "Conceitos, Jest, sucrase e integração contínua com CircleCI",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "build": "sucrase ./src -d ./dist --transforms importsnpm ",
+    "dev": "nodemon src/app.js",
+    "start": "node dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guizanin/teste_unitarios_jest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "transform": {
+      "\\.(js|jsx|ts|tsx)$": "@sucrase/jest-plugin"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/Guizanin/teste_unitarios_jest/issues"
+  },
+  "homepage": "https://github.com/Guizanin/teste_unitarios_jest#readme",
+  "devDependencies": {
+    "@sucrase/jest-plugin": "^2.2.1",
+    "jest": "^28.1.1",
+    "nodemon": "^2.0.16",
+    "sucrase": "^3.21.0"
+  },
+  "dependencies": {
+    "@types/jest": "^28.1.2",
+    "express": "^4.18.1"
+  }
+}
